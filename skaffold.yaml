@@ -23,5 +23,13 @@ build:
       sync:
         manual:
           - dest: .
-            src: '**/*.js'        
+            src: '**/*.js' 
+    - image: mod488/tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - dest: .
+            src: 'src/**/*.ts'               
         
