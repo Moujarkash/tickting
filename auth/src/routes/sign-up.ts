@@ -41,11 +41,8 @@ router.post(
     };
 
     res.status(201).send({
-      data: {
-        id: user.id,
-        email: user.email,
-        token: userJwt,
-      },
+      user: user,
+      token: userJwt,
     });
   }
 );

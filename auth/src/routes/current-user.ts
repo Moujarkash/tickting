@@ -1,9 +1,9 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import { currentUser } from '@modtickets/common';
 
 const router = express.Router();
 
-router.get('/api/users/currentUser', currentUser, (req, res) => {
+router.get('/api/users/currentUser', currentUser, (req: Request, res: Response) => {
   res.send({ currentUser: req.currentUser || null });
 });
 

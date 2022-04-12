@@ -46,11 +46,8 @@ router.post(
     };
 
     res.send({
-      data: {
-        id: existingUser.id,
-        email: existingUser.email,
-        token: userJwt,
-      },
+      user: existingUser,
+      token: userJwt
     });
   }
 );
