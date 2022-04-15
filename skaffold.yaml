@@ -31,5 +31,13 @@ build:
       sync:
         manual:
           - dest: .
-            src: 'src/**/*.ts'               
+            src: 'src/**/*.ts' 
+    - image: mod488/orders
+      context: orders
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - dest: .
+            src: 'src/**/*.ts'                       
         
